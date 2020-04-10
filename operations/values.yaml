@@ -3,13 +3,9 @@ clusters:
   namespace: operations
   destinationServer: https://kubernetes.default.svc
   apps:
-  - chart: prometheus
-    repo: https://kubernetes-charts.storage.googleapis.com
-    version: 9.7.4
-    syncPolicy:
-      automated:
-        prune: true
-        selfHeal: true
-  - chart: couchdb
-    repo: https://kubernetes-charts.storage.googleapis.com
-    version: 2.3.0
+    prometheus:
+      enabled: true
+      version: "9.7.4"
+    couchdb:
+      enabled: true
+      version: "2.3.0"
