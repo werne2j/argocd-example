@@ -2,7 +2,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{printf "%s-%s" .name "monitoring"}}
+  name: {{printf "%s-%s" .name "vault"}}
   namespace: argocd
   finalizers:
   - resources-finalizer.argocd.argoproj.io
@@ -12,9 +12,9 @@ spec:
     server: {{ .destinationServer }}
   project: default
   source:
-    chart: adwerx/awx
-    repoURL: https://adwerx.github.io/charts
-    targetRevision: {{ .apps.awx.version }}
+    path: .
+    repoURL: https://github.com/hashicorp/vault-helm
+    targetRevision: {{ .apps.vault.version }}
   syncPolicy:
     automated:
       prune: true

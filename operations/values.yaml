@@ -6,5 +6,5 @@ clusters:
     prometheus:
       enabled: true
       version: 9.7.4
-    awx:
-      version: 2.2.1
+    vault:
+      version: HEAD
