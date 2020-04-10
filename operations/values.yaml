@@ -1,0 +1,14 @@
+clusters:
+- name: test
+  destinationServer: https://kubernetes.default.svc
+  apps:
+  - chart: prometheus
+    repo: https://kubernetes-charts.storage.googleapis.com
+    version: 9.7.4
+    syncPolicy:
+      automated:
+        prune: true
+        selfHeal: true
+  - chart: couchdb
+    repo: https://kubernetes-charts.storage.googleapis.com
+    version: 2.3.0
