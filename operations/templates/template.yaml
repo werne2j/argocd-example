@@ -1,5 +1,6 @@
 {{- range .Values.clusters }}
 {{- $name := .name -}}
+{{- $namespace := .namespace -}}
 {{- $server := .destinationServer -}}
 {{- range .apps }}
 apiVersion: argoproj.io/v1alpha1
@@ -11,7 +12,7 @@ metadata:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: default
+    namespace: {{ $namespace }}
     server: {{ $server }}
   project: default
   source:

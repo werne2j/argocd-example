@@ -1,5 +1,6 @@
 clusters:
 - name: test
+  namespace: operations
   destinationServer: https://kubernetes.default.svc
   apps:
   - chart: prometheus
