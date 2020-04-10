@@ -15,6 +15,10 @@ spec:
     path: .
     repoURL: https://github.com/hashicorp/vault-helm
     targetRevision: {{ .apps.vault.version }}
+    helm:
+      parameters:
+      - name: server.dev.enabled
+        value: true
   syncPolicy:
     automated:
       prune: true
