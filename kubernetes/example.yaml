@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  annotations:
+    avp_path: kv/test
+  name: example-secret
+data:
+  sample-secret: <secret>
+type: Opaque
