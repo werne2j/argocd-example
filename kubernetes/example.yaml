@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   annotations:
-    avp_path: kv/test
+    avp_path: kv/data/test
   name: example-secret
 data:
   sample-secret: <secret>
