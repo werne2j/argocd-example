@@ -3,7 +3,7 @@ kind: Secret
 metadata:
   annotations:
     avp_path: kv/data/test
-  name: example-secret
+  name: sample-secret
 stringData:
   example-secret: <thing>
 type: Opaque
