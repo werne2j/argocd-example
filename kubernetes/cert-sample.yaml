@@ -4,6 +4,6 @@ metadata:
   annotations:
     avp_path: kv/data/test
   name: sample-cert
-stringData:
+data:
   sample-cert: <sample-cert>
 type: Opaque
