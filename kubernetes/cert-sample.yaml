@@ -7,3 +7,13 @@ metadata:
 data:
   sample-cert: <sample-cert>
 type: Opaque
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  annotations:
+    avp_path: kv/data/test
+  name: sample-cert-encoded
+stringData:
+  sample-cert: <sample-cert>
+type: Opaque
