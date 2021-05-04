@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  annotations:
+    avp.kubernetes.io/path: "secret/test"
+    avp.kubernetes.io/kv-version: "1"
+  name: one-secret
+stringData:
+  one-secret: <sample>
+type: Opaque
