@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: new-secret
+stringData:
+  example-secret: <kv/data/test#thing>
+type: Opaque
