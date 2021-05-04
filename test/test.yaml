@@ -2,7 +2,7 @@ apiVersion: v1
 kind: Secret
 metadata:
   annotations:
-    avp_path: kv/data/test
+    avp.kubernetes.io/path: kv/data/test
   name: sample-secret
 stringData:
   example-secret: <thing>
